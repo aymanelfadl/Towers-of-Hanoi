@@ -28,8 +28,32 @@ void TowersOfHanoi(int n, char source, char destination, char helper)
     TowersOfHanoi(n - 1, helper, destination, source);
 }
 
+
+// int ux2(int n)
+// {
+//     if (n == 0)
+//         return 1;
+//     else
+//         return (2*(ux2(n - 1)+ 2/ux2(n-1)));
+// } 
+
+// int u(int n)
+// {
+//     int result = 1;
+//     while (n > 0)
+//     {
+//         result = 2*(result + 2 / result);
+//         n--;
+//     }
+//     return result;
+// }
+
 int main()
 {
     TowersOfHanoi(3, 'S', 'D', 'H');
+    // printf("iterative:%d\nrecursive: %d\n", u(10), ux2(10));
     return 0;
 }
+
+
+
